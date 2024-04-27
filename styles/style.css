@@ -1,67 +1,21 @@
-/* место для вашего кода */
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Regular.woff");
-  src: url("../fonts/Raleway-Regular.woff2");
-  font-weight: 400;
-  font-style: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Bold.woff");
-  src: url("../fonts/Raleway-Bold.woff2");
-  font-weight: 700;
-  font-style: normal;
-  text-rendering: optimizeLegibility;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-button {
-  border: none;
-  background: transparent;
-}
-
-
-body {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  height: 100vh;
-}
-
 /* header */
 
-.header .container {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  padding: 92px 24px 95px;
   align-items: center;
-  padding-top: 92px;
-  margin-bottom: 95px;
 }
 
 .header__logo {
   width: 129px;
-  height: 104px;
+  margin-left: 40px;
+  margin-right: 200px;
 }
 
-.header .container .header__list ul {
-  min-width: 380px;
+.header .header__list ul {
+  min-width: 416px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -71,7 +25,7 @@ body {
   justify-content: space-between;
 }
 
-.header .container .header__list ul li a {
+.header .header__list ul li a {
   font-size: 18px;
   line-height: 21.13px;
   color: #000;
@@ -80,10 +34,6 @@ body {
 .header__list__none {
   list-style-type: none;
   text-decoration: none;
-}
-
-.header__adress {
-  text-align: center;
 }
 
 .header__adress p,
@@ -101,10 +51,7 @@ body {
 .main {
   width: 1100px;
   height: 757px;
-  background-image: url('../images/cover.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(../images/cover.jpg) no-repeat center / cover;
   margin-bottom: 179px;
   position: relative;
   z-index: 1;
@@ -123,11 +70,12 @@ body {
 }
 
 .main__text {
-  height: 85%;
-  padding: 165px 50px;
+  position: relative;
+  /* height: 85%; */
+  padding: 165px 50px 100px;
 }
 
-.main__text_h1 {
+.main__text_head {
   display: block;
   font-size: 100px;
   color: #fff;
@@ -135,15 +83,43 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   z-index: 10;
+  margin-bottom: 10px;
 }
 
-.main__text_h1:nth-child(2) {
+.main__text_head:nth-child(2) {
   text-align: center;
 }
 
-.main__text_h1:nth-child(3) {
+.main__text_head:nth-child(3) {
   text-align: right;
 }
+
+.ml {
+  margin-left: 30px;
+}
+
+.main__text_head span:nth-child(1) {
+  padding-right: 5px;
+}
+
+.main__text_head span:nth-child(2) {
+  padding-right: 5px;
+}
+
+/* .text-tebe,
+.text-nado {
+  position: absolute;
+}
+
+.text-tebe {
+  left: 0;
+  right: 58px;
+}
+
+.text-nado  {
+  right: 55px;
+  bottom: 108px;
+} */
 
 .main__wrapper {
   display: -webkit-box;
@@ -160,6 +136,7 @@ body {
 
 .main__footer {
   width: 637px;
+  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,7 +148,11 @@ body {
   color: #fff;
 }
 
-.main__button button {
+.main__footer p:nth-child(1) {
+  padding-right: 4px;
+}
+
+.main__button {
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 500;
@@ -196,35 +177,40 @@ body {
   padding-left: 40px;
 }
 
+.cards__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
 .cards__item {
-  display: inline-block;
-  vertical-align: top;
   width: 334px;
   height: 563px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-right: 20px;
   position: relative;
+  text-decoration: none;
 }
 
-.item1 {
+.item-picture {
   background-image: url('../images/card-lot-01.jpg');
 
 }
 
-.item2 {
+.item-bull {
   background-image: url('../images/card-lot-02.jpg');
 }
 
-.item3 {
+.item-abstraction {
   background-image: url('../images/card-lot-03.jpg');
   margin-right: 0;
 }
 
-.item1:before,
-.item2:before,
-.item3:before {
+.item-picture:before,
+.item-bull:before,
+.item-abstraction:before {
   content: '';
   display: block;
   width: 100%;
@@ -260,6 +246,7 @@ body {
   font-weight: 700;
   line-height: 26.4px;
   z-index: 10;
+  text-decoration: underline;
 }
 
 .cards__item__description {
@@ -272,11 +259,11 @@ body {
 
 .cards__see {
   display: block;
-  text-transform: uppercase;
   font-size: 20px;
+  font-weight: 400;
   color: #000;
-  padding-left: 30px;
-  margin-top: 40px;
+  padding-left: 39px;
+  margin-top: 32px;
 }
 
 /* article about */
@@ -285,31 +272,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 35px 24px 193px 47px;
+  padding: 35px 24px 193px 71px;
   gap: 72px;
 }
 
 .about__logo {
-  width: 100%;
+  width: 1400px;
   position: relative;
-  height: 190px;
+  height: 241px;
   position: relative;
-  border-radius: 100px;
+  border-radius: 1000px;
   background-color: #000;
 
 }
 
 .about__logo__wrapper {
-  position: absolute;
-  top: 51px;
-  left: 31px;
   height: auto;
   border-radius: 100px;
   font-size: 0;
+  padding: 61px 38px;
 }
 
 .about__logo svg {
-  height: 100px;
+  height: 119px;
   background-color: #000;
 }
 
@@ -328,7 +313,7 @@ body {
   font-size: 40px;
   font-weight: 700;
   line-height: 46.96px;
-  padding-top: 75px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 
@@ -337,6 +322,9 @@ body {
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 24px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
 }
 
 .about__text__paragraph:last-child {
@@ -361,16 +349,24 @@ body {
 }
 
 .footer__see {
+  margin-right: -50px;
   text-align: center;
 }
 
 .footer__see__name {
+  display: block;
+  text-decoration: none;
   font-size: 18px;
-  line-height: 21.13px;
+  line-height: 23.13px;
 }
 
 .footer__see__link {
   color: #000;
+  line-height: 23.13px;
+}
+
+.footer__icons {
+  display: flex;
 }
 
 .footer__icons a {
@@ -378,7 +374,7 @@ body {
   margin-right: 48px;
 }
 
-.footer__icons_img {
+.footer__icons a img {
   background-image: no-repeat;
   height: 48px;
 }
