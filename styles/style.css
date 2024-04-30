@@ -23,6 +23,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding-left: 25px;
 }
 
 .header .header__list ul li a {
@@ -37,12 +38,11 @@
 }
 
 .header__adress p,
-.header__adress a {
+.header__adress a,
+.footer__adress p,
+.footer__adress a {
   font-size: 18px;
   line-height: 24px;
-}
-
-.header__adress a {
   color: #000;
 }
 
@@ -50,7 +50,6 @@
 
 .main {
   width: 1100px;
-  height: 757px;
   background: url(../images/cover.jpg) no-repeat center / cover;
   margin-bottom: 179px;
   position: relative;
@@ -71,12 +70,10 @@
 
 .main__text {
   position: relative;
-  /* height: 85%; */
   padding: 165px 50px 100px;
 }
 
 .main__text_head {
-  display: block;
   font-size: 100px;
   color: #fff;
   line-height: 115px;
@@ -86,40 +83,33 @@
   margin-bottom: 10px;
 }
 
+.main__text_head:nth-child(1) {
+  letter-spacing: 32px;
+}
+
+
 .main__text_head:nth-child(2) {
-  text-align: center;
+  text-align: left;
+  padding-left: 286px;
+  letter-spacing: 32px;
 }
 
 .main__text_head:nth-child(3) {
-  text-align: right;
+  padding-left: 586px;
+  letter-spacing: 32px;
 }
 
-.ml {
-  margin-left: 30px;
+.text-ono {
+  margin-left: -28px;
 }
 
-.main__text_head span:nth-child(1) {
-  padding-right: 5px;
+.text-tebe{
+  padding-left: 24px;
 }
 
-.main__text_head span:nth-child(2) {
-  padding-right: 5px;
-}
-
-/* .text-tebe,
 .text-nado {
-  position: absolute;
+padding-right: 25px;
 }
-
-.text-tebe {
-  left: 0;
-  right: 58px;
-}
-
-.text-nado  {
-  right: 55px;
-  bottom: 108px;
-} */
 
 .main__wrapper {
   display: -webkit-box;
@@ -131,11 +121,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 10px 50px 0 78px;
+  padding: 10px 50px 45px 78px;
 }
 
 .main__footer {
-  width: 637px;
   display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,8 +137,8 @@
   color: #fff;
 }
 
-.main__footer p:nth-child(1) {
-  padding-right: 4px;
+.main__footer p {
+  word-spacing: 19px;
 }
 
 .main__button {
@@ -272,7 +261,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 35px 24px 193px 71px;
+  padding: 35px 24px 180px 71px;
   gap: 72px;
 }
 
