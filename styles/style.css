@@ -70,7 +70,7 @@
 
 .main__text {
   position: relative;
-  padding: 165px 50px 100px;
+  padding: 174px 50px 125px;
 }
 
 .main__text_head {
@@ -80,7 +80,6 @@
   font-weight: 700;
   text-transform: uppercase;
   z-index: 10;
-  margin-bottom: 10px;
 }
 
 .main__text_head:nth-child(1) {
@@ -342,16 +341,18 @@ padding-right: 25px;
   text-align: center;
 }
 
-.footer__see__name {
-  display: block;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 23.13px;
-}
-
 .footer__see__link {
   color: #000;
+  line-height: 21.13px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 1px solid #000;
+}
+
+.footer__see__link:first-child {
+  display: block;
   line-height: 23.13px;
+  border-bottom: none;
 }
 
 .footer__icons {
